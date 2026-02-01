@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI AutoDoc | Smart Diagnostic</title>
+    <link rel="stylesheet" href="a.css"> </head>
+<body>
+    <div class="container">
+        <h1>AI AutoDoc</h1>
+        <p>Explain the issue in your own words.</p>
+        
+        <textarea id="userInput" placeholder="Type symptoms here..."></textarea>
+        <button id="analyzeBtn">Analyze with AI</button>
+
+        <div id="loader" class="hidden">Scanning vehicle knowledge base...</div>
+        
+        <div id="resultBox" class="hidden">
+            <h3>AI Analysis Report</h3>
+            
+            <div id="urgencyWrapper">
+                <p><strong>Urgency Level:</strong> <span id="urgencyLabel">Analyzing...</span></p>
+                <div style="background: #e0e0e0; border-radius: 10px; height: 12px; width: 100%;">
+                    <div id="urgencyMeter" style="width: 0%; height: 100%; border-radius: 10px; transition: width 1s ease, background-color 0.5s;"></div>
+                </div>
+            </div>
+
+            <div id="aiResponse"></div>
+            <hr>
+            <button id="telegramBtn" style="background: #0088cc; margin-bottom: 10px;">📲 Send to Mechanic</button>
+            <button onclick="reset()" style="background: #666;">Clear</button>
+        </div>
+    </div>
+
+    <script src="a.js"></script> </body>
+</html>
